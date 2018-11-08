@@ -3,7 +3,37 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.27703.2035
 MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ShoppingCart.Core", "ShoppingCart.Core\ShoppingCart.Core.csproj", "{A26BA29A-4A8C-43B3-B4A2-23DD1F605DF9}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ShoppingCart.Core.Tests", "ShoppingCart.Core.Tests\ShoppingCart.Core.Tests.csproj", "{2A961EC1-762E-4792-A533-2B6B5FBCEEA6}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ShoppingCard.Web", "ShoppingCard.Web\ShoppingCard.Web.csproj", "{A787ACEC-95E6-4478-B9CD-DEBB46F3808B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ShoppingCard.Web.Tests", "ShoppingCard.Web.Tests\ShoppingCard.Web.Tests.csproj", "{9DC2778C-6934-485A-94FB-3488027B059C}"
+EndProject
 Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{A26BA29A-4A8C-43B3-B4A2-23DD1F605DF9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A26BA29A-4A8C-43B3-B4A2-23DD1F605DF9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A26BA29A-4A8C-43B3-B4A2-23DD1F605DF9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A26BA29A-4A8C-43B3-B4A2-23DD1F605DF9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2A961EC1-762E-4792-A533-2B6B5FBCEEA6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2A961EC1-762E-4792-A533-2B6B5FBCEEA6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2A961EC1-762E-4792-A533-2B6B5FBCEEA6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2A961EC1-762E-4792-A533-2B6B5FBCEEA6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A787ACEC-95E6-4478-B9CD-DEBB46F3808B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A787ACEC-95E6-4478-B9CD-DEBB46F3808B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A787ACEC-95E6-4478-B9CD-DEBB46F3808B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A787ACEC-95E6-4478-B9CD-DEBB46F3808B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9DC2778C-6934-485A-94FB-3488027B059C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9DC2778C-6934-485A-94FB-3488027B059C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9DC2778C-6934-485A-94FB-3488027B059C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9DC2778C-6934-485A-94FB-3488027B059C}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
