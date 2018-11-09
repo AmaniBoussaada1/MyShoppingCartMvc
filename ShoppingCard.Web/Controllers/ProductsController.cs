@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
+using ShoppingCart.Core.Domain;
 
 namespace ShoppingCard.Web.Controllers
 {
@@ -21,6 +22,40 @@ namespace ShoppingCard.Web.Controllers
             return View(repo.FindAll());
         }
 
+        public ActionResult AddToCart(string id)
+        {
+            List<Item> panier = null;
+            Product produit = repo.FindAll().FirstOrDefault(p => p.ProductId.Equals(id));
+            if (Session["cart"] == null)
+            {
+                panier=new List<Item> {new Item
+                {
+                    Product = produit,
+                    Quantity = 1
+                }};
+               
+            }
+            else
+            {
+                panier = (List<Item>) Session["cart"];
+                var item = panier.Find(i => i.Product.ProductId.Equals(id));
+                if (item == null)
+                {
+                    panier.Add(new Item
+                    {
+                        Product = produit,
+                        Quantity = 1
+                    });
+                }
+                else
+                {
+                    item.Quantity++;
+                }
+            }
+            Session["cart"] = panier;
+            return View("Panier", panier);
+        }
+
         public ActionResult About()
         {
             ViewBag.Message = "Your application description page.";
@@ -34,5 +69,6 @@ namespace ShoppingCard.Web.Controllers
 
             return View();
         }
+
     }
 }
